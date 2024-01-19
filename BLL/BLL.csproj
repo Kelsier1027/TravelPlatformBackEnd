@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="客服\Class1.cs" />
     <Compile Include="租車\BrandService.cs" />
     <Compile Include="租車\CarModelImageService.cs" />
     <Compile Include="租車\CarModelService.cs" />
@@ -77,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="住宿\" />
-    <Folder Include="客服\" />
     <Folder Include="會員\" />
     <Folder Include="管理員\" />
     <Folder Include="行程\" />
