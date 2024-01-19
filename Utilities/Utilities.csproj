@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B90D8DA-5E48-4644-B80A-1A24C29ADDAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Utilities</RootNamespace>
+    <AssemblyName>Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="租車\Consts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="租車\Exts\DtoExts\CarModelDtoExts.cs" />
+    <Compile Include="租車\Exts\EFModelExts\CarModelEFModelExts.cs" />
+    <Compile Include="租車\Exts\EFModelExts\CarModelImageEFModelExts.cs" />
+    <Compile Include="租車\Exts\EntityExts\CarModelEntityExts.cs" />
+    <Compile Include="租車\Exts\EntityExts\CarModelImageEntityExts.cs" />
+    <Compile Include="租車\FileHelper\FileHelper.cs" />
+    <Compile Include="租車\FileHelper\RenameProviders\GuidRenameProvider.cs" />
+    <Compile Include="租車\FileHelper\RenameProviders\IRenameProvider.cs" />
+    <Compile Include="租車\FileHelper\UploadValidators\ExtensionValidator.cs" />
+    <Compile Include="租車\FileHelper\UploadValidators\IUploadValidator.cs" />
+    <Compile Include="租車\FileHelper\UploadValidators\MaxSizeValidator.cs" />
+    <Compile Include="租車\FileHelper\UploadValidators\RequiredValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{f76e9932-ff01-41ea-8139-76cf472c534e}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFModel\EFModel.csproj">
+      <Project>{e9e8f303-dd89-4d6f-9b56-4fe15294c7ba}</Project>
+      <Name>EFModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{09f74437-ee1f-4087-8e7d-6f385717b58e}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="住宿\" />
+    <Folder Include="客服\" />
+    <Folder Include="會員\" />
+    <Folder Include="管理員\" />
+    <Folder Include="行程\" />
+    <Folder Include="評論\" />
+    <Folder Include="門票\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
