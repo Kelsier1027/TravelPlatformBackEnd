@@ -61,6 +61,18 @@
     <Compile Include="租車\EnergyType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="租車\Transmission.cs" />
+    <Compile Include="門票\AppDbContext.cs" />
+    <Compile Include="門票\Attraction.cs" />
+    <Compile Include="門票\AttractionsCategory.cs" />
+    <Compile Include="門票\AttractionsCity.cs" />
+    <Compile Include="門票\AttractionsContent.cs" />
+    <Compile Include="門票\AttractionsContentImage.cs" />
+    <Compile Include="門票\AttractionsOrder.cs" />
+    <Compile Include="門票\AttractionsOrderItem.cs" />
+    <Compile Include="門票\AttractionsOrderStatu.cs" />
+    <Compile Include="門票\AttractionsTicket.cs" />
+    <Compile Include="門票\AttractionsTicketStock.cs" />
+    <Compile Include="門票\AttractionsTicketType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,7 +85,6 @@
     <Folder Include="管理員\" />
     <Folder Include="行程\" />
     <Folder Include="評論\" />
-    <Folder Include="門票\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
