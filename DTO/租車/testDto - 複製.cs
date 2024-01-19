@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO.租車
 {
-	internal class testDto2
+	internal class testDto
 	{
 	}
 }
