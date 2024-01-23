@@ -9,5 +9,6 @@ namespace Utilities
     internal class Class1
     {
         public int 黃崢 { get; set; }
+        public int 黃崇恩 { get; set; }
     }
 }
